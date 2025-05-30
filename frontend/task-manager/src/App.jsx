@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate,
 } from "react-router-dom";
 import UserDashboard from './pages/User/UserDashboard';
 import Login from './pages/Auth/Login';
@@ -25,6 +26,7 @@ const App = () => {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path='/' element={<Navigate to="/login" replace/>} />
 
 
           <Route element={<PrivateRoute allowedRoles={["admin"]} />}>
