@@ -224,7 +224,7 @@ const CreateTask = () => {
               Task Title
             </label>
             <input
-              placeholder="Create App UI"
+              placeholder="Create Task"
               className="form-input"
               value={taskData.title}
               onChange={({ target }) =>
