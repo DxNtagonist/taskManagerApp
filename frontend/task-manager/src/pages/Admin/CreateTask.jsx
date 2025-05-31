@@ -52,7 +52,7 @@ const CreateTask = () => {
   const createTask = async () => {
     setLoading(true);
     try {
-      const todolist = taskData.todoCheckList?.map((item) => ({
+      const todolist = taskData.todoCheckList?.map((item) => ({ 
         text: item,
         completed: false,
       }));
@@ -130,10 +130,7 @@ const CreateTask = () => {
       return;
     }
 
-    if (taskData.assignedTo?.length === 0) {
-      setError("Task not assigned to any member");
-      return;
-    }
+    
 
     if (taskData.todoCheckList?.length === 0) {
       setError("Add atleast one todo task");
