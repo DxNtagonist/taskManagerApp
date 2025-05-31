@@ -35,6 +35,11 @@ const SignUp = () => {
       return;
     }
 
+    if (password.length < 8) {
+    setError("Password must be at least 8 characters.");
+    return;
+  }
+
     setError("");
 
     //SignUp API Call
@@ -101,13 +106,15 @@ const SignUp = () => {
               onChange={({ target }) => setPassword(target.value)}
               label="Password"
               placeholder="Minimum 8 characters"
-              type="password" />
+              type="password"
+              
+               />
 
             <Input
               value={adminInviteToken}
               onChange={({ target }) => setAdminInviteToken(target.value)}
               label="Admin Invite Token"
-              placeholder="6 digit Code"
+              placeholder="6 digit Code (it is 4588944)"
               type="text" />
           </div>
 

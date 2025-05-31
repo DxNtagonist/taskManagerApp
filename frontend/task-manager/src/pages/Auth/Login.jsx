@@ -28,6 +28,11 @@ const Login = () => {
       return;
     }
 
+    if (password.length < 8) {
+    setError("Password must be at least 8 characters.");
+    return;
+  }
+
     setError("");
 
     //Login API call
@@ -84,7 +89,9 @@ const Login = () => {
             onChange={({ target }) => setPassword(target.value)}
             label="Password"
             placeholder="Minimum 8 characters"
-            type="password" />
+            type="password"
+            
+            />
 
           {error && <p className="text-red-500 text-xs pb-2.5">{error}</p>}
 
